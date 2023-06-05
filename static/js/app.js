@@ -22,15 +22,15 @@ function optionChanged(value) {
     var selectId = samples.find((item) => item.id === value);
     var demoInfo = mdata.find((item) => item.id == value);
 
-// Calls for demographic data
-    metaData(demoInfo);
-
 // Calls for bar chart
     horizBarChart(selectId);
 
 // Calls for bubble Chart
     bubbleChart(selectId);
 
+ // Calls for demographic data
+    metaData(demoInfo);
+   
 }
 //Pulls each of the demographic items and sets each title
 function metaData(demoInfo) {
